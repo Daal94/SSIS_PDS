@@ -79,10 +79,10 @@ Connect strings are loaded with passwords to allow for automation of SSIS ETL ba
     -- 2) Solution Level Configurations
 
 
-    -- 2.1) jc
+    -- 2.1) DA
 	
     DELETE FROM dbo.[SSIS Configurations]
-     WHERE ConfigurationFilter = 'jc';
+     WHERE ConfigurationFilter ='DA';
 	
 
 	-- 2.1.1) v_data_share_root
@@ -93,8 +93,8 @@ Connect strings are loaded with passwords to allow for automation of SSIS ETL ba
                                         , ConfiguredValueType)
     VALUES
           (
-           'jc'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_dw\txt_files\'
+           'DA'
+		 , 'C:\Users\Daniel\Desktop\IT243\repos\DFNB_src\txt_files\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
@@ -123,7 +123,7 @@ Connect strings are loaded with passwords to allow for automation of SSIS ETL ba
     VALUES
           (
            'SSIS_PDS_Template'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_dw\txt_files\'
+		 , 'C:\Users\Daniel\Desktop\IT243\repos\DFNB_src\txt_files\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
