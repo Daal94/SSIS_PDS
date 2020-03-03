@@ -69,12 +69,49 @@ Connect strings are loaded with passwords to allow for automation of SSIS ETL ba
          , '\Package.Variables[User::conn_EXM].Properties[Value]'
          , 'String'
           );
+--1.2 conn_DFNB2
 
+ INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'CommonConfigurations'
+         , 'Data Source=localhost;Initial Catalog=DFNB2;Provider=SQLNCLI11;Integrated Security=SSPI;'
+         , '\Package.Variables[User::conn_DFNB2].Properties[Value]'
+         , 'String'
+          );
 
 
 	
+	--1.3 conn_DFNB3
 
+	
+ INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'CommonConfigurations'
+         , 'Data Source=localhost;Initial Catalog=DFNB3;Provider=SQLNCLI11;Integrated Security=SSPI;'
+         , '\Package.Variables[User::conn_DFNB3].Properties[Value]'
+         , 'String'
+          );
+ --1.4 conn_DA
 
+  INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'CommonConfigurations'
+         , 'Data Source=localhost;Initial Catalog=DA;Provider=SQLNCLI11;Integrated Security=SSPI;'
+         , '\Package.Variables[User::conn_DA].Properties[Value]'
+         , 'String'
+          );
 
     -- 2) Solution Level Configurations
 
@@ -132,5 +169,7 @@ Connect strings are loaded with passwords to allow for automation of SSIS ETL ba
 END;
 
 GO
+
+
 
 
