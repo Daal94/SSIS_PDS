@@ -12,11 +12,35 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{094783D5-50DD-40CE-881B-F699890B1402}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{0D487F1D-3D70-41DA-B345-E54FEB01AE62}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DFNB3]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A236BF4E-61C8-41F4-873B-C5EBD034694F}"
+      DTS:ObjectName="DFNB3">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::conn_DFNB3]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=DFNB3;Provider=SQLNCLI11;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EXM]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D319830D-97EE-4022-8128-A923019C3103}"
+      DTS:ObjectName="EXM">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::conn_EXM]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[SSIS_PDS]"
       DTS:CreationName="OLEDB"
@@ -69,6 +93,24 @@
       DTS:ObjectName="BatchLogID">
       <DTS:VariableValue
         DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F85553EB-98C2-4668-8135-4188FB058B5C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="conn_DFNB3">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=localhost;Initial Catalog=DFNB3;Provider=SQLNCLI11;Integrated Security=SSPI;</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{37B0DEFB-7BC8-4CB7-A3DF-08D796E612B0}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="conn_EXM">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=localhost;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -654,6 +696,44 @@
               ReadOnlyVariables="System::VariableValue"
               ReadWriteVariables="User::strVariableValue">
               <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_ac0a1a1361544b1fa758ad70b21ab8ad")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("HP Inc.")> 
+<Assembly: AssemblyProduct("ST_ac0a1a1361544b1fa758ad70b21ab8ad")> 
+<Assembly: AssemblyCopyright("Copyright @ HP Inc. 2020")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("b7ac0258-4c40-4a32-93f1-d1828af980d7")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
                 Name="ScriptMain.vb"
                 Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -770,44 +850,6 @@ End Class]]></ProjectItem>
   </Profiles>
   <Settings />
 </SettingsFile>]]></ProjectItem>
-              <ProjectItem
-                Name="My Project\AssemblyInfo.vb"
-                Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_ac0a1a1361544b1fa758ad70b21ab8ad")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("HP Inc.")> 
-<Assembly: AssemblyProduct("ST_ac0a1a1361544b1fa758ad70b21ab8ad")> 
-<Assembly: AssemblyCopyright("Copyright @ HP Inc. 2020")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("b7ac0258-4c40-4a32-93f1-d1828af980d7")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Settings.Designer.vb"
                 Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
@@ -1374,14 +1416,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,55"
+          Size="205,98"
+          Id="Package\Documentation"
+          TopLeft="208.392857142857,489.107142857143" />
         <NodeLayout
-          Size="185,42"
-          Id="Package\SQL LogPackageEnd"
-          TopLeft="546.071428571429,512.928571428571" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\SQL LogPackageStart"
-          TopLeft="48.9285714285714,11.6428571428571" />
+          Size="115,42"
+          Id="Package\Parent Container\Test Connection Managers\DFNB3"
+          TopLeft="282.607142857143,31.2857142857143" />
         <NodeLayout
           Size="103,42"
           Id="Package\Parent Container\Test Connection Managers\EXM"
@@ -1390,10 +1435,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="133,42"
           Id="Package\Parent Container\Test Connection Managers\SSIS_PDS"
           TopLeft="134.571428571429,30.3928571428571" />
-        <NodeLayout
-          Size="115,42"
-          Id="Package\Parent Container\Test Connection Managers\DFNB3"
-          TopLeft="282.607142857143,31.2857142857143" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -1401,6 +1442,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="414,171"
           Id="Package\Parent Container\Test Connection Managers"
           TopLeft="33.2857142857143,24.4285714285715" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Parent Container\Test Force Error"
+          TopLeft="464.714285714286,175.857142857143" />
         <NodeLayout
           Size="158,42"
           Id="Package\Parent Container\Test Log Variable Value Changed\Initial Date Time"
@@ -1438,10 +1483,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="266,250"
           Id="Package\Parent Container\Test Log Variable Value Changed"
           TopLeft="689,7.10714285714286" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Parent Container\Test Force Error"
-          TopLeft="464.714285714286,175.857142857143" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -1449,6 +1490,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="1074,389"
           Id="Package\Parent Container"
           TopLeft="61,74" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\SQL LogPackageEnd"
+          TopLeft="546.071428571429,512.928571428571" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\SQL LogPackageStart"
+          TopLeft="48.9285714285714,11.6428571428571" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="236.928571428571,32.6428571428571">
@@ -1511,13 +1560,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="205,55"
-          Size="205,98"
-          Id="Package\Documentation"
-          TopLeft="208.392857142857,489.107142857143" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1561,15 +1603,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package.EventHandlers[OnVariableValueChanged]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="236,42"
-          Id="Package.EventHandlers[OnVariableValueChanged]\SQL LogVariableValueChanged"
-          TopLeft="123,102" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="192,42"
           Id="Package.EventHandlers[OnVariableValueChanged]\Convert Value to String"
           TopLeft="143,23" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package.EventHandlers[OnVariableValueChanged]\SQL LogVariableValueChanged"
+          TopLeft="123,102" />
         <EdgeLayout
           Id="Package.EventHandlers[OnVariableValueChanged].PrecedenceConstraints[Constraint]"
           TopLeft="240,65">
@@ -1589,7 +1631,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
