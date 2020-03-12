@@ -10,10 +10,10 @@
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.71"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="SSIS_PDS_Template_DA"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{0D487F1D-3D70-41DA-B345-E54FEB01AE62}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{E03602D0-9DDA-43A8-8DDF-987D72E5F316}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -138,6 +138,15 @@
       DTS:ObjectName="strVariableValue">
       <DTS:VariableValue
         DTS:DataType="8">Unable to Convert to String</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6860DCDF-6693-4B1E-AE7B-FC9D86DA4FF4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="v_data_share_root">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\Daniel\Desktop\IT243\repos\DFNB_txt\</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -1422,52 +1431,52 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="205,55"
           Size="205,98"
           Id="Package\Documentation"
-          TopLeft="208.392857142857,489.107142857143" />
+          TopLeft="124,518.5" />
         <NodeLayout
           Size="115,42"
           Id="Package\Parent Container\Test Connection Managers\DFNB3"
-          TopLeft="282.607142857143,31.2857142857143" />
+          TopLeft="5.5,5.5" />
         <NodeLayout
           Size="103,42"
           Id="Package\Parent Container\Test Connection Managers\EXM"
-          TopLeft="18.8571428571429,29.8571428571428" />
+          TopLeft="181.5,5.5" />
         <NodeLayout
           Size="133,42"
           Id="Package\Parent Container\Test Connection Managers\SSIS_PDS"
-          TopLeft="134.571428571429,30.3928571428571" />
+          TopLeft="345.5,5.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="414,128"
-          Size="414,171"
+          PanelSize="484,103"
+          Size="484,146"
           Id="Package\Parent Container\Test Connection Managers"
-          TopLeft="33.2857142857143,24.4285714285715" />
+          TopLeft="5.5,56.5" />
         <NodeLayout
           Size="159,42"
           Id="Package\Parent Container\Test Force Error"
-          TopLeft="464.714285714286,175.857142857143" />
+          TopLeft="550,108.5" />
         <NodeLayout
           Size="158,42"
           Id="Package\Parent Container\Test Log Variable Value Changed\Initial Date Time"
-          TopLeft="47.8571428571429,9" />
+          TopLeft="10.5,5.5" />
         <NodeLayout
           Size="168,42"
           Id="Package\Parent Container\Test Log Variable Value Changed\Update Date Time"
-          TopLeft="37.6785714285714,105.964285714286" />
+          TopLeft="5.50000000000001,107.5" />
         <EdgeLayout
           Id="Package\Parent Container\Test Log Variable Value Changed.PrecedenceConstraints[Constraint]"
-          TopLeft="124.267857142857,51">
+          TopLeft="89.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,54.9642857142857"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,47.4642857142857">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.4642857142857" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1479,45 +1488,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="266,207"
-          Size="266,250"
+          PanelSize="179,205"
+          Size="179,248"
           Id="Package\Parent Container\Test Log Variable Value Changed"
-          TopLeft="689,7.10714285714286" />
+          TopLeft="770,5.49999999999989" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="1074,346"
-          Size="1074,389"
+          PanelSize="954,308"
+          Size="954,351"
           Id="Package\Parent Container"
-          TopLeft="61,74" />
+          TopLeft="5.5,107.5" />
         <NodeLayout
           Size="185,42"
           Id="Package\SQL LogPackageEnd"
-          TopLeft="546.071428571429,512.928571428571" />
+          TopLeft="390,546.5" />
         <NodeLayout
           Size="188,42"
           Id="Package\SQL LogPackageStart"
-          TopLeft="48.9285714285714,11.6428571428571" />
+          TopLeft="388.5,5.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="236.928571428571,32.6428571428571">
+          TopLeft="482.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="361.071428571429,41.3571428571429"
+              EndConnector="0,60"
               Start="0,0"
-              End="361.071428571429,33.8571428571429">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="357.071428571429,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="357.071428571429,0"
-                    Point2="361.071428571429,0"
-                    Point3="361.071428571429,4" />
-                  <mssgle:LineSegment
-                    End="361.071428571429,33.8571428571429" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1528,30 +1531,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="598,463">
+          TopLeft="482.5,458.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="40.5714285714288,49.9285714285714"
+              EndConnector="0,88"
               Start="0,0"
-              End="40.5714285714288,42.4285714285714">
+              End="0,80.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.9642857142857" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.9642857142857"
-                    Point2="0,24.9642857142857"
-                    Point3="4,24.9642857142857" />
-                  <mssgle:LineSegment
-                    End="36.5714285714288,24.9642857142857" />
-                  <mssgle:CubicBezierSegment
-                    Point1="36.5714285714288,24.9642857142857"
-                    Point2="40.5714285714288,24.9642857142857"
-                    Point3="40.5714285714288,28.9642857142857" />
-                  <mssgle:LineSegment
-                    End="40.5714285714288,42.4285714285714" />
+                    End="0,80.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
