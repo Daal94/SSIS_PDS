@@ -165,6 +165,23 @@ Connect strings are loaded with passwords to allow for automation of SSIS ETL ba
          , 'String'
           );
 
+		    DELETE FROM dbo.[SSIS Configurations]
+     WHERE ConfigurationFilter = 'LoadNAICSCodeHierDim_DA';
+	
+
+	-- 3.1.1) v_data_share_root
+
+    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'LoadNAICSCodeHierDim_DA'
+		 , 'C:\Users\Daniel\Desktop\IT243\repos\DFNB_dw\xls_files\'
+         , '\Package.Variables[User::v_data_share_root].Properties[Value]'
+         , 'String'
+          );
 
 END;
 
